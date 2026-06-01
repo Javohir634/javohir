@@ -75,3 +75,32 @@ elif level == "c" and minsWeek < 200:  # Club runner has not met target
 else:
     print("Weekly exercise:", minsWeek, "minutes")
     print("Well done, you have met your weekly exercise target.")
+
+
+# Q01c
+# Program variables
+days = ["Monday", "Tuesday", "Wednesday", "Thursday",
+        "Friday", "Saturday", "Sunday"]
+
+minsWeek = 0
+
+# Get level
+level = input("Please enter e (elite) or c (club): ").lower()
+
+# Get total minutes exercised for the week
+for day in days:
+    minsToday = int(input("Please enter total minutes exercise on " + day + " > "))
+    minsWeek = minsWeek + minsToday
+
+# Check exercise target
+if level == "e" and minsWeek < 300:   # Elite runner has not met target
+    print("Weekly exercise:", minsWeek, "minutes")
+    print("You have not met your exercise target of 300 minutes.")
+
+elif level == "c" and minsWeek < 200:  # Club runner has not met target
+    print("Weekly exercise:", minsWeek, "minutes")
+    print("You have not met your exercise target of 200 minutes.")
+
+else:
+    print("Weekly exercise:", minsWeek, "minutes")
+    print("Well done, you have met your weekly exercise target.")
